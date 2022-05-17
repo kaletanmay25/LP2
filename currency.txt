@@ -1,0 +1,46 @@
+public class calculator{
+
+   
+  public double number1 {get;set;}
+  
+  public double result {get;set;}
+  
+
+       
+    public void itd(){
+         result = number1*0.013;
+        
+    }
+     public void dti(){
+         result = number1*76.57;
+        
+    }
+  
+
+}
+
+
+
+
+
+
+
+<apex:page controller="calculator" showHeader="true">
+  <apex:form >
+  <apex:pageBlock title="Currency Converter">
+  Value: <apex:inputText value="{!number1}"/><br/><br/>
+   
+   <apex:pageBlockButtons >
+   <apex:commandButton value="Inr to Dollar" action="{!itd}" />
+       <apex:commandButton value="Dollar to Inr" action="{!dti}" />
+       
+
+      </apex:pageBlockButtons>
+ 
+  <b>Output is:<apex:outputText value="{!result}"></apex:outputText></b>
+  </apex:pageBlock>
+ 
+  
+  
+  </apex:form>
+</apex:page>
